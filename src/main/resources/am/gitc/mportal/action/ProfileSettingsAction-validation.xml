@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+
+    <field name="user.name">
+
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter your name</message>
+        </field-validator>
+
+        <field-validator type="stringlength">
+            <param name="minLength">2</param>
+            <message>Please enter your name</message>
+        </field-validator>
+
+        <field-validator type="stringlength">
+            <param name="maxLength">20</param>
+            <message>Please enter valid name</message>
+        </field-validator>
+
+    </field>
+
+    <field name="user.surname">
+
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter your name</message>
+        </field-validator>
+
+        <field-validator type="stringlength">
+            <param name="minLength">2</param>
+            <message>Please enter your name</message>
+        </field-validator>
+
+        <field-validator type="stringlength">
+            <param name="maxLength">20</param>
+            <message>Please enter valid name</message>
+        </field-validator>
+
+    </field>
+
+    <field name="newPassword">
+
+        <field-validator type="regex">
+            <param name="regex">[A-Z,a-z,0-9]{8,20}</param>
+            <message>Please enter valid password</message>
+        </field-validator>
+
+    </field>
+
+    <field name="user.birthDate">
+        <field-validator type="date">
+            <param name="min">01/01/1930</param>
+            <param name="max">12/31/1999</param>
+            <message>Please enter your birthday between ${min} and ${max}</message>
+        </field-validator>
+    </field>
+
+
+</validators>

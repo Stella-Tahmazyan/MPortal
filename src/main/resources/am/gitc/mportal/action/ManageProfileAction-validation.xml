@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+    <field name="user.description">
+
+        <field-validator type="requiredstring">
+            <message>Please enter your description</message>
+        </field-validator>
+
+        <field-validator type="stringlength">
+            <param name="minLength">15</param>
+            <message>Please write more information about you.</message>
+        </field-validator>
+
+    </field>
+
+    <field name="user.experience">
+
+        <field-validator type="requiredstring">
+            <message>Please enter your experience</message>
+        </field-validator>
+
+        <field-validator type="stringlength">
+            <param name="minLength">5</param>
+            <message>Please write more information about your experience.</message>
+        </field-validator>
+    </field>
+
+    <field name="user.skills">
+
+        <field-validator type="requiredstring">
+            <message>Please enter your skils</message>
+        </field-validator>
+
+        <field-validator type="stringlength">
+            <param name="minLength">3</param>
+            <message>Please write more information about your skils.</message>
+        </field-validator>
+
+    </field>
+</validators>
